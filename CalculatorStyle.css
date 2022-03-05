@@ -4,13 +4,47 @@ body{
     background-size: cover;
 }
 .container{
-    background: #8e9eab;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    opacity: 0.6;
+    background: #8e9eab6c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #eef2f379, #8e9eab6c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #eef2f379,#8e9eab6c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
     width: 25%;
     height: 350px;
     margin: auto;
     margin-top: 100px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input{
+    width: 90%;
+    height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+    background-color: aliceblue;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border-radius: 15px;
+    caret-color: #4f585f;
+}
+input:focus{
+    outline: none !important;
+    border-color: none;
+}
+.buttons{
+    width: 90%;
+    height: 270px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: bisque;
 }
