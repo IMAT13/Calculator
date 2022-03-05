@@ -1,0 +1,16 @@
+body{
+    background-image: url("Background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    background: #8e9eab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    opacity: 0.6;
+    width: 25%;
+    height: 350px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 10px;
+}
