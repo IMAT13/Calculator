@@ -62,8 +62,9 @@ function calculate(){
 }
 function calc(PSOps,Op){
 
-  for(var i=0;i<PSOps.length;i++){
-    var index=eval(PSOps[i]);
+  var OpCounts=PSOps.length;
+  while(OpCounts>0){
+    var index=eval(PSOps[0]);
     switch(Op){
         case "*":
           Nums[index+1]=eval(Nums[index])*eval(Nums[index+1]);
@@ -80,7 +81,9 @@ function calc(PSOps,Op){
       } 
       for(var k=index;k<PSOps.length-1;k++) {PSOps[k]=(eval(PSOps[k+1])-1);}
       PSOps.pop();  
-      for(var j=index;i<Nums.length-1;j++) {Nums[j]=Nums[j+1];} 
+      for(var j=index;j<Nums.length-1;j++) {Nums[j]=Nums[j+1];} 
       Nums.pop();
+      OpCounts--;
     }
+
 }
