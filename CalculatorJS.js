@@ -51,10 +51,8 @@ function findOps(Op){
 }
 function calculate(){
   Nums[count]=document.getElementById("screen").value.replace(LastText,"");
-  alert(Nums);
   PrioritySortedOps=findOps("*");
   calc(PrioritySortedOps,"*");
-  alert(Nums);
   PrioritySortedOps=[];
   PrioritySortedOps=findOps("/");
   calc(PrioritySortedOps,"/");
@@ -66,12 +64,11 @@ function calculate(){
   calc(PrioritySortedOps,"-");
   PrioritySortedOps=[];
   document.getElementById("screen").value=Nums[0];
-  Nums=[];
+  InputText=Nums[0];
   Ops=[];
-  UseOp=false;
+  UseOp=true;
   LastOp="";
   count=0;
-  LastText=Nums[0];
 }
 function calc(PSOps,Op){
 
