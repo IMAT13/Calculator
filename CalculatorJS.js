@@ -41,12 +41,20 @@ function findOps(Op){
     indices.push(idx);
     idx = Ops.indexOf(element, idx + 1);
   }
+  for( var i = 0; i < Ops.length; i++){ 
+    if ( Ops[i] == Op) { 
+        Ops.splice(i, 1); 
+        i--; 
+    }
+}
   return indices; 
 }
 function calculate(){
   Nums[count]=document.getElementById("screen").value.replace(LastText,"");
+  alert(Nums);
   PrioritySortedOps=findOps("*");
   calc(PrioritySortedOps,"*");
+  alert(Nums);
   PrioritySortedOps=[];
   PrioritySortedOps=findOps("/");
   calc(PrioritySortedOps,"/");
@@ -58,7 +66,12 @@ function calculate(){
   calc(PrioritySortedOps,"-");
   PrioritySortedOps=[];
   document.getElementById("screen").value=Nums[0];
-  alert(Nums[0]);
+  Nums=[];
+  Ops=[];
+  UseOp=false;
+  LastOp="";
+  count=0;
+  LastText=Nums[0];
 }
 function calc(PSOps,Op){
 
