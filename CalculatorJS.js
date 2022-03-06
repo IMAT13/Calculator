@@ -5,6 +5,9 @@ var Ops= new Array();
 var count=0;
 var LastText="";
 var PrioritySortedOps=new Array;
+function reset(){
+document.getElementById("screen").value=""; 
+}
 function inputNum(BTN){
     InputText=document.getElementById("screen").value;
     document.getElementById("screen").value+=BTN.innerText;
@@ -49,27 +52,6 @@ function findOps(Op){
 }
   return indices; 
 }
-function calculate(){
-  Nums[count]=document.getElementById("screen").value.replace(LastText,"");
-  PrioritySortedOps=findOps("*");
-  calc(PrioritySortedOps,"*");
-  PrioritySortedOps=[];
-  PrioritySortedOps=findOps("/");
-  calc(PrioritySortedOps,"/");
-  PrioritySortedOps=[];
-  PrioritySortedOps=findOps("+");
-  calc(PrioritySortedOps,"+");
-  PrioritySortedOps=[];
-  PrioritySortedOps=findOps("-");
-  calc(PrioritySortedOps,"-");
-  PrioritySortedOps=[];
-  document.getElementById("screen").value=Nums[0];
-  InputText=Nums[0];
-  Ops=[];
-  UseOp=true;
-  LastOp="";
-  count=0;
-}
 function calc(PSOps,Op){
 
   var OpCounts=PSOps.length;
@@ -96,4 +78,25 @@ function calc(PSOps,Op){
       OpCounts--;
     }
 
+}
+function calculate(){
+  Nums[count]=document.getElementById("screen").value.replace(LastText,"");
+  PrioritySortedOps=findOps("*");
+  calc(PrioritySortedOps,"*");
+  PrioritySortedOps=[];
+  PrioritySortedOps=findOps("/");
+  calc(PrioritySortedOps,"/");
+  PrioritySortedOps=[];
+  PrioritySortedOps=findOps("+");
+  calc(PrioritySortedOps,"+");
+  PrioritySortedOps=[];
+  PrioritySortedOps=findOps("-");
+  calc(PrioritySortedOps,"-");
+  PrioritySortedOps=[];
+  document.getElementById("screen").value=Nums[0];
+  InputText=Nums[0];
+  Ops=[];
+  UseOp=true;
+  LastOp="";
+  count=0;
 }

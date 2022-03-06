@@ -7,9 +7,9 @@
 		<script src="CalculatorJS.js"></script> 
 		<title>Calculator</title>
 	</head>
-	<body>
+	<body onload="reset()">
 		<div class="container">
-				<input id="screen" type="text">
+				<input id="screen" type="text" value="">
 				<div class="buttons">
 					<button onclick="inputNum(this)">7</button><button onclick="inputNum(this)">8</button><button onclick="inputNum(this)">9</button><button class="Op" onclick="inputOp(this)">/</button>
 					<button onclick="inputNum(this)">4</button><button onclick="inputNum(this)">5</button><button onclick="inputNum(this)">6</button><button class="Op" onclick="inputOp(this)">*</button>
