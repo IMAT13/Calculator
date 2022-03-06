@@ -57,8 +57,8 @@ function calculate(){
   PrioritySortedOps=findOps("-");
   calc(PrioritySortedOps,"-");
   PrioritySortedOps=[];
-  // document.getElementById("screen").value=Nums[0];
-  //alert(Nums[0]);
+  document.getElementById("screen").value=Nums[0];
+  alert(Nums[0]);
 }
 function calc(PSOps,Op){
 
@@ -78,8 +78,9 @@ function calc(PSOps,Op){
           Nums[index+1]=eval(Nums[index])-eval(Nums[index+1]);
           break;
       } 
+      for(var k=index;k<PSOps.length-1;k++) {PSOps[k]=(eval(PSOps[k+1])-1);}
+      PSOps.pop();  
+      for(var j=index;i<Nums.length-1;j++) {Nums[j]=Nums[j+1];} 
+      Nums.pop();
     }
-   for(var j=index;i<Nums.length-1;j++) {Nums[j]=Nums[j+1];} 
-   Nums.pop();
-   alert(Nums);
 }
